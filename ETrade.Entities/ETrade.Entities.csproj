@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="ComplexType\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ETrade.Core\ETrade.Core.csproj" />
+  </ItemGroup>
+
 </Project>
