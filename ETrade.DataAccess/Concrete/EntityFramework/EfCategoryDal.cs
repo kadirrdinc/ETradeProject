@@ -9,5 +9,6 @@ namespace ETrade.DataAccess.Concrete.EntityFramework
 {
     public class EfCategoryDal : EfEntityRepositoryBase<Category, DatabaseContext>, ICategoryDAL
     {
+
     }
 }

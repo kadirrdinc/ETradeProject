@@ -1,5 +1,5 @@
 ﻿using ETrade.Core.DataAccess.EntityFramework;
-using ETrade.Entities.Concrate;
+using ETrade.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;

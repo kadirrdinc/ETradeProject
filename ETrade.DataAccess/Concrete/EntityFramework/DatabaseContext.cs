@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ETrade.DataAccess.Concrete.EntityFramework
 {
-    class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
