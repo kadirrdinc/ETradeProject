@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ETrade.Core\ETrade.Core.csproj" />
+    <ProjectReference Include="..\ETrade.DataAccess\ETrade.DataAccess.csproj" />
+    <ProjectReference Include="..\ETrade.Entities\ETrade.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

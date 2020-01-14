@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ETrade.Entities.Concrate
+namespace ETrade.Entities.Concrete
 {
     public class Product : IEntity
     {
