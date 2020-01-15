@@ -1,4 +1,5 @@
 ﻿using ETrade.BusinessLayer.Abstract;
+using ETrade.DataAccess.Abstract;
 using ETrade.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,16 @@ namespace ETrade.BusinessLayer.Concrete
 {
     class CategoryManager : ICategoryService
     {
+        private ICategoryDAL _categoryDAL;
+
+        public CategoryManager(ICategoryDAL categoryDAL)
+        {
+            _categoryDAL = categoryDAL;
+        }
+
         public List<Category> GetAll()
         {
-            throw new NotImplementedException();
+            return _categoryDAL.GetList();
         }
     }
 }

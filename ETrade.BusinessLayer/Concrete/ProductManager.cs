@@ -24,7 +24,7 @@ namespace ETrade.BusinessLayer.Concrete
 
         public void Delete(int productId)
         {
-            _productDAL.Delete(productId);
+            _productDAL.Delete(new Product { ProductId = productId });
         }
 
         public List<Product> GetAll()
@@ -39,7 +39,7 @@ namespace ETrade.BusinessLayer.Concrete
 
         public void Update(Product product)
         {
-            return _productDAL.Update(product);
+            _productDAL.Update(product);
         }
     }
 }
