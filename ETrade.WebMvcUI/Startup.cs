@@ -6,6 +6,7 @@ using ETrade.BusinessLayer.Abstract;
 using ETrade.BusinessLayer.Concrete;
 using ETrade.DataAccess.Abstract;
 using ETrade.DataAccess.Concrete.EntityFramework;
+using ETrade.WebMvcUI.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +34,9 @@ namespace ETrade.WebMvcUI
             {
                 app.UseDeveloperExceptionPage();                
             }
+
+            app.UseStaticFiles();
+            app.UseNodeModules(env.ContentRootPath);
 
             //app.UseRouting();
 

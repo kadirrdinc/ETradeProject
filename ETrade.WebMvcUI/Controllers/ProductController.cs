@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ETrade.BusinessLayer.Abstract;
+using ETrade.WebMvcUI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ETrade.WebMvcUI.Controllers
@@ -16,9 +17,16 @@ namespace ETrade.WebMvcUI.Controllers
             _productService = productService;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
-            _productService.GetAll();
+            var result = _productService.GetAll();
+
+            ProductListViewModel model = new ProductListViewModel
+            {
+                Products = result
+            };
+
+            return View(model);
         }
     }
 }
