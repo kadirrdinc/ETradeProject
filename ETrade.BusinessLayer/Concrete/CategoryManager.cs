@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ETrade.BusinessLayer.Concrete
 {
-    class CategoryManager : ICategoryService
+   public class CategoryManager : ICategoryService
     {
         private ICategoryDAL _categoryDAL;
 

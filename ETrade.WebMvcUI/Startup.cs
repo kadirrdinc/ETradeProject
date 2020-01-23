@@ -23,6 +23,8 @@ namespace ETrade.WebMvcUI
         {
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDAL, EfProductDal>();
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<ICategoryDAL, EfCategoryDal>();
             services.AddMvc(MvcOptions=>MvcOptions.EnableEndpointRouting = false);
         }
 
