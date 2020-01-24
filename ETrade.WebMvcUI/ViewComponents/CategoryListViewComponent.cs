@@ -24,7 +24,8 @@ namespace ETrade.WebMvcUI.ViewComponents
 
             CategoryListViewModel model = new CategoryListViewModel()
             {
-                Categories = categoryList
+                Categories = categoryList,
+                CurrentCategory=Convert.ToInt32(HttpContext.Request.Query["category"])
             };
             return View(model);
         }

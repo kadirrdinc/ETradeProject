@@ -8,6 +8,12 @@
 
                 @foreach (var categories in Model.Categories)
                 {
+                    //var css = "panel-title";
+                    //if (categories.CategoryId==Model.CurrentCategory)
+                    //{
+                    //    css += " active";
+                    //}
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title"><a href="/Home/Index?category=@categories.CategoryId"><b>@categories.CategoryName</b></a></h4>
