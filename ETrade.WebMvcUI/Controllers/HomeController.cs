@@ -11,21 +11,17 @@ namespace ETrade.WebMvcUI.Controllers
     public class HomeController : Controller
     {
         private IProductService _productService;
-        private ICategoryService _categoryService;
-
-        public HomeController(IProductService productService, ICategoryService categoryService)
+        public HomeController(IProductService productService)
         {
             _productService = productService;
-            _categoryService = categoryService;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int category = 0)
         {
-            var products = _productService.GetAll();
-            var categories = _categoryService.GetAll();
+            int pageSize = 10;
+            var products = _productService.GetByCategory(category);
             ProductListViewModel model = new ProductListViewModel()
             {
-                Products = products,
-                Categories=categories
+                Products = products.Skip((page - 1) * pageSize).Take(pageSize).ToList()
             };
 
             return View(model);

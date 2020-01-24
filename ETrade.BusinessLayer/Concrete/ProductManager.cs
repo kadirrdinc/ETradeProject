@@ -34,7 +34,7 @@ namespace ETrade.BusinessLayer.Concrete
 
         public List<Product> GetByCategory(int categoryId)
         {
-            return _productDAL.GetList(c => c.CategoryId == categoryId);
+            return _productDAL.GetList(c => c.CategoryId == categoryId || categoryId == 0);
         }
 
         public void Update(Product product)
